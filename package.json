@@ -1,0 +1,26 @@
+{
+  "name": "AssestmentTelkom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "Johanes",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^4.20.6",
+    "axios": "^0.27.2",
+    "next": "^12.1.6",
+    "node-sass": "^7.0.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "redux": "^4.2.0",
+    "redux-saga": "^1.1.3",
+    "reduxsauce": "^1.2.1",
+    "sagas": "0.0.1"
+  }
+}
