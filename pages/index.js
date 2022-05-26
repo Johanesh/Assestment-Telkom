@@ -43,7 +43,7 @@ const Login = (props) => {
 
   return (
     <div className='form-input'>
-      <h1>Github Repo List</h1>
+      <h1>Github Repos</h1>
       <Input name="username" value={username} disabled={disabled} size="large" placeholder="Input your github username here (ex: @johndoe)" onChange={handleChange}/>
       <div className='form-input__error'>{error}</div>
       <div className='form-input__button'>

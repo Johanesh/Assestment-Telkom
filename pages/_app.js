@@ -1,5 +1,5 @@
-import '../public/styles/index.scss';
 import 'antd/dist/antd.css';
+import '../public/styles/index.scss';
 
 function MyApp({ Component, pageProps }) {
     return <Component {...pageProps} />
