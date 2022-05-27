@@ -4,6 +4,7 @@ import {
   Input,
 } from 'antd';
 import axios from 'axios';
+import cookies from 'react-cookies';
 import { useRouter } from 'next/router';
 import { gitHubBaseURL } from '../public/general/index.js';
 
@@ -25,10 +26,8 @@ const Login = (props) => {
     if (username) {
       await axios.get(`${gitHubBaseURL}/users/${username}`).then((res) => {
         const resData = res.data;
-        const loginName = resData.login;
-        const repoURL = resData.repos_url;
-        localStorage.setItem('name', loginName);
-        localStorage.setItem('repo', repoURL);
+        cookies.save('name', resData.login);
+        cookies.save('repo', resData.repos_url);
         setError('');
         router.push('/list');
       }). catch((err) => {
@@ -44,7 +43,7 @@ const Login = (props) => {
   return (
     <div className='form-input'>
       <h1>Github Repos</h1>
-      <Input name="username" value={username} disabled={disabled} size="large" placeholder="Input your github username here (ex: @johndoe)" onChange={handleChange}/>
+      <Input name="username" value={username} disabled={disabled} size="large" placeholder="Input your github username here (ex: johndoe)" onChange={handleChange}/>
       <div className='form-input__error'>{error}</div>
       <div className='form-input__button'>
         <Button type="primary" disabled={disabled} onClick={() => handleClick()}>See the List</Button>

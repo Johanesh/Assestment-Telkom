@@ -19,6 +19,10 @@
     &__wrapper {
         position: relative;
     }
+    &__quit {
+        margin-top: 16px;
+        text-align: center;
+    }
     &__container {
         border: 1px solid #000;
         border-radius: 4px;
@@ -38,6 +42,13 @@
         h3, p {
             margin: 0;
         }
+        &--empty {
+            text-align: center;
+        }
+    }
+    &__url {
+        display: inline-block;
+        cursor: pointer;
     }
     &__input {
         width: calc(100% - 35px) !important;
